@@ -2,7 +2,7 @@ require 'sinatra/base'
 require 'active_record'
 require 'active_support'
 
-$config = YAML::load(File.open('./config/apps/jabba.yml'))[ENV["RACK_ENV"]||'development']
+$config = YAML::load(File.open('./config/config.example.yml'))[ENV["RACK_ENV"]||'development']
 
 # rewrite $config with ENV variables
 $config.keys.each do |key|
