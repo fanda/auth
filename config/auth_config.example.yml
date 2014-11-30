@@ -1,0 +1,12 @@
+development:
+  ROOT: "./"
+  DEFAULT_SERVICES: ['service1', 'service2']
+
+  CIPHERED_SERVICES: ['service2']
+  MAILAPI_KEY: text key
+
+  SYMBOL_SEED: integer seed
+  TOKEN_SEED: integer seed
+  ACCESS_TOKEN_SEED: text seed
+
+  CIPHER: aes-256-cbc

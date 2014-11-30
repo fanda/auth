@@ -1,0 +1,65 @@
+/users:
+
+  /logout:
+    delete:
+      access: private
+      description: Destroy session
+      queryParameters:
+        token: string
+      responses:
+        200:
+          body:
+
+  /login:
+    post:
+      access: public
+      description: Create session
+      body:
+        application/json:
+          formParameters:
+            domain: string
+            user:
+              name: string
+              password: string
+       responses:
+         200:
+           body:
+             application/json:
+              token: string
+  /passwd:
+    post:
+      access: public
+      description: Reset password
+      body:
+        application/json:
+          formParameters:
+            domain: string
+            user:
+              name: string
+       responses:
+         200:
+           body:
+
+
+  /register:
+    post:
+      access: public
+      description: Add new user
+      body:
+        application/json:
+          formParameters:
+            user:
+              name: string
+              password: string
+       responses:
+         201:
+           body:
+             application/json:
+               token: string
+         405:
+           description: User exists
+           body:
+         412:
+           description: Invalid request
+           body:
+

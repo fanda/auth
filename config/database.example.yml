@@ -1,0 +1,11 @@
+development:
+  adapter: postgresql
+  encoding: utf8
+  database: devel
+  host: localhost
+
+production:
+  adapter: postgresql
+  encoding: utf8
+  database: product
+  host: localhost
